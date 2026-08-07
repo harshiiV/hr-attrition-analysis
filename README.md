@@ -70,7 +70,7 @@ hr-attrition-analysis/
 | Overall Attrition Rate | **16.1%** (237 of 1,470 employees) |
 | Highest Risk Department | **Sales** — 20.6% attrition rate |
 | Overtime Impact | Employees with OT leave at **30.5%** vs 10.4% without (3× higher) |
-| Salary Gap | Employees who left earned **$1,716/month less** on average |
+| Salary Gap | Employees who left earned **₹2,046/month less** on average |
 | Highest Risk Age Group | **18–25** — 38.2% attrition rate |
 | Early Tenure Risk | **58% of attrition** happens in first 3 years |
 | Most Stable Role | **Manager** — only 5.0% attrition rate |
@@ -96,54 +96,24 @@ Top 5 most predictive features:
 
 ---
 
-## 🚀 How to Run
-
-### 1. Clone & Install
-
-```bash
-git clone https://github.com/YOUR_USERNAME/hr-attrition-analysis.git
-cd hr-attrition-analysis
-pip install -r requirements.txt
-```
-
-### 2. Get the Dataset
-
-Download IBM HR Analytics from Kaggle:
-https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
-
-Save as: `data/ibm_hr.csv`
-
-### 3. Run EDA
-
-```bash
-python notebooks/01_eda_analysis.py
-```
-
-### 4. Train ML Model
-
-```bash
-python notebooks/02_ml_model.py
-```
-
-### 5. Run SQL Analysis
-
-```bash
-cd sql
-python run_queries.py
-```
-
-### 6. Launch Web App
-
-```bash
-cd streamlit
-streamlit run app.py
-```
-
----
-
 ## 📊 Dashboard Screenshots
 
-*(Add screenshots of your Power BI / Tableau dashboard here after building it)*
+**KPI Summary**
+![KPI Summary](outputs/dashboard_charts/01_kpi_summary.png)
+
+| Attrition by Department | Attrition by Gender |
+|---|---|
+| ![Attrition by Department](outputs/dashboard_charts/02_attrition_by_department.png) | ![Attrition by Gender](outputs/dashboard_charts/03_attrition_by_gender.png) |
+
+| Attrition by Age Group | Salary Band vs Attrition |
+|---|---|
+| ![Attrition by Age](outputs/dashboard_charts/04_attrition_by_age.png) | ![Salary Band vs Attrition](outputs/dashboard_charts/05_salary_band_vs_attrition.png) |
+
+| Top Job Roles by Attrition | Attrition by OverTime |
+|---|---|
+| ![Top Job Roles](outputs/dashboard_charts/06_top_job_roles_attrition.png) | ![Attrition by OverTime](outputs/dashboard_charts/07_attrition_by_overtime.png) |
+
+*A full interactive Power BI version (with slicers for Department, Job Role, OverTime, and Gender) is available — see [powerbi_guide/POWERBI_GUIDE.md](powerbi_guide/POWERBI_GUIDE.md) for the build steps and DAX measures.*
 
 ---
 
@@ -168,18 +138,15 @@ FROM risk_scores WHERE rank <= 5;
 
 ## 🔗 Links
 
-- 📊 **Live Streamlit App**: [link-after-deploy]
-- 📈 **Tableau Public Dashboard**: [link-after-publish]
+- 📊 **Live Streamlit App**: [https://hr-attrition-analysis-fdfe7vndwbea8f9rr6dnbu.streamlit.app/](https://hr-attrition-analysis-fdfe7vndwbea8f9rr6dnbu.streamlit.app/)
+- 📈 **Power BI Dashboard**: See [Dashboard Screenshots](#-dashboard-screenshots) above (built with Python from the same data — full interactive Power BI build guide in [powerbi_guide/POWERBI_GUIDE.md](powerbi_guide/POWERBI_GUIDE.md))
 - 📁 **Kaggle Dataset**: https://www.kaggle.com/datasets/pavansubhasht/ibm-hr-analytics-attrition-dataset
 
 ---
 
 ## 👤 Author
 
-**Your Name** | B.Tech (Computer Science / IT) — Final Year
-- LinkedIn: linkedin.com/in/yourprofile
-- GitHub: github.com/yourusername
-- Email: your@email.com
+**Harshita Sharma** | B.Tech (Computer Science / IT) — Final Year
 
 ---
 
