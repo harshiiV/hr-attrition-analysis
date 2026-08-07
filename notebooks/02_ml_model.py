@@ -131,7 +131,7 @@ for name, model in models.items():
     print(f"\n{name}")
     print(f"  CV AUC   : {cv_scores.mean():.4f} ± {cv_scores.std():.4f}")
     print(f"  Test AUC : {auc:.4f}")
-    print(classification_report(y_test, y_pred, target_names=['Stayed','Left'], indent=4))
+    print(classification_report(y_test, y_pred, target_names=['Stayed','Left']))
 
 
 # =============================================================
